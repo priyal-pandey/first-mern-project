@@ -66,3 +66,36 @@ rate limiting - way to control how often someone can do something on a website o
 - copy tokens, npm install @upstash/ratelimit@2.0.5 @upstash/redis@1.34.9
 
 config upstash.js
+
+## cd frontend
+
+npm create vite@latest
+npm i react-router
+npm i react-hot-toast
+set up pages, router, routes, BrowserRouter, Toaster
+
+tailwind css
+daisy ui - themes, components
+
+for icons - npm i lucide-react
+
+for replacing fetch api with axios - npm i axios
+
+
+CORS - cross origin resource sharing
+browser security rule- when website tries to get ata from another website(e.g. frontend calling api on a different domain - the browser might block it for security reasons)
+
+e.g frontend at http://localhost:3000
+API backend at http://api.example.com
+
+we made a fetch req to get data, but we are coming from localhost:3000 trying to access api.example.com (diff origin)
+need to make sure the api allows this
+
+go to backend
+how to fix: add middleware 
+npm i cors
+
+app.use(cors({
+    origin:"http://localhost:5173"
+}
+));
